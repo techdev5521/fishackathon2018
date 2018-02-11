@@ -12,8 +12,14 @@ body{
 	font-size: 4em;
 }
 #title h1{
-	color: white;
+	/*color: white;*/
 }
+
+#searchFields{
+	margin-top: 10px;
+	margin-bottom: 10px;
+}
+
 .col-md-12 {
 	position: relative;
 	padding-top:30px;

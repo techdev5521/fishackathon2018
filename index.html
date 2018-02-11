@@ -5,13 +5,17 @@
 		<title>IUU Fishing Risk-Assessment Tool</title>
 
 		<!-- Stylesheets -->
-		<link rel="stylesheet" href="css/bootstrap.min.css"> <!-- Bootstrap 3.3.7 -->
+		<link rel="stylesheet" href="css/bootstrap.min.css">
+		<link rel="stylesheet" href="css/jquery.typeahead.min.css">
 		<link rel="stylesheet" href="css/main.css">
 
 		<!-- JavaScript -->
 		<script src="js/jquery-3.2.1.slim.min.js"></script>
 		<script src="js/popper.min.js"></script>
 		<script src="js/bootstrap.min.js"></script>
+		<script src="js/jquery.typeahead.min.js"></script>
+		<!-- <script src="js/popper.min.js"></script> -->
+		<!-- <script src="js/bootstrap.min.js"></script> -->
 	</head>
 
 
@@ -24,7 +28,42 @@
 			<div class="col-md-12">
 				<h1>Enter the species of fish and location you are interested in fishing in.</h1>
 			</div>
+
+			<div class="row" id="searchFields">
+				<form>
+					<div class="col-md-6">
+						<div class="typeahead__container">
+							<div class="typeahead__field">
+								<span class="typeahead__query">
+									<label for="species">Species</label>
+									<input id="species" type="search" autocomplete="off">
+									<small class="form-text text-muted">Enter the species of fish you wish to search for.</small>
+								</span>
+							</div>
+						</div>
+					</div>
+					<div class="col-md-6">
+						<div class="typeahead__container">
+							<div class="typeahead__field">
+								<span class="typeahead__query">
+									<label for="species">Species</label>
+									<input id="species" type="search" autocomplete="off">
+									<small class="form-text text-muted">Enter the species of fish you wish to search for.</small>
+								</span>
+							</div>
+						</div>
+					</div>
+				</form>
+			</div>
+
 		</div>
+
+	<script>
+		$('#species').typeahead({
+			minLength: 2,
+			source: [ "This is", "Sparta"]
+		});
+	</script>
 
 	</body>
 
