@@ -80,7 +80,7 @@
 
 	<script>
       function initMap() {
-	        var country = "Somalia";
+	        var country = "Sudan";
 	        var geocoder = new google.maps.Geocoder();
 
 	        var map = new google.maps.Map(document.getElementById('map'), {
@@ -94,13 +94,19 @@
 			});
     	}
 
-    	function setCustomCenter(country){
-    		geocoder.geocode( {'address' : country}, function(results, status) {
+    	function somalia(){
+    		var map = new google.maps.Map(document.getElementById('map'), {
+	          zoom: 4
+	        });
+    		var geocoder = new google.maps.Geocoder();
+    		geocoder.geocode( {'address' : "Somalia"}, function(results, status) {
 			    if (status == google.maps.GeocoderStatus.OK) {
 			        map.setCenter(results[0].geometry.location);
 			    }
 			});
-    	}
+
+		}
+
     </script>
 
 	<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCC7nrWmeyQ6BsCv1jZLCckO02FBqQHFUg&callback=initMap"></script>
