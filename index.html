@@ -30,26 +30,16 @@
 					<h1>Enter the species of fish and location you are interested in fishing in.</h1>
 				</div>
 			</div>
-			<div class="row">
-				<div class="col-lg-6" id="species">
-					<h1><strong>Species</strong>
-					</h1>
-				</div>
-				<div class="col-lg-6" id="location">
-					<h1><strong>Location</strong>
-					</h1>
-				</div>
-			</div>
 
 			<div class="row" id="searchFields">
-				<form>
+				<!-- <form> -->
 					<div class="col-md-6">
 						<div class="typeahead__container">
 							<div class="typeahead__field">
 								<span class="typeahead__query">
 									<label for="species">Species</label>
 									<input id="species" type="search" autocomplete="off">
-									<small class="form-text text-muted">Enter the species of fish you wish to search for.</small>
+									<!-- <small class="form-text text-muted">Enter the species of fish you wish to search for.</small> -->
 								</span>
 							</div>
 						</div>
@@ -58,14 +48,14 @@
 						<div class="typeahead__container">
 							<div class="typeahead__field">
 								<span class="typeahead__query">
-									<label for="species">Species</label>
-									<input id="species" type="search" autocomplete="off">
-									<small class="form-text text-muted">Enter the species of fish you wish to search for.</small>
+									<label for="country">Country</label>
+									<input id="country" type="search" autocomplete="off">
+									<!-- <small class="form-text text-muted">Enter the country you'd like to fish in.</small> -->
 								</span>
 							</div>
 						</div>
 					</div>
-				</form>
+				<!-- </form> -->
 			</div>
 
 		</div>
@@ -74,6 +64,11 @@
 		$('#species').typeahead({
 			minLength: 2,
 			source: [ "This is", "Sparta"]
+		});
+
+		$('#country').typeahead({
+			minLength: 2,
+			source: [ "Do you", "Know", "De wey"]
 		});
 	</script>
 

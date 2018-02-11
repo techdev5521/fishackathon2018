@@ -14,36 +14,7 @@ body{
 #title h1{
 	/*color: white;*/
 }
-<<<<<<< HEAD
-
-#searchFields{
-	margin-top: 10px;
-	margin-bottom: 10px;
-	position: relative;
-	padding-top:30px;
-	padding-left:20%;
-}
 
 #command h1{
 	font-size:1.5em;
-}
-#species {
-	position:relative;
-	padding-top:35px;
-	padding-left:23%;
-	padding-right:23%;
-}	
-#species h1{
-	color:white;
-	font-size:1.7em;
-}
-#location {
-	position:relative;
-	padding-top:35px;
-	padding-left:23%;
-	padding-right:23%;
-}
-#location h1 {
-	color:white;
-	font-size:1.7em;
 }
