@@ -32,47 +32,35 @@
 			</div>
 
 			<div class="row" id="searchFields">
-				<!-- <form> -->
-					<div class="col-md-6">
-						<div class="typeahead__container">
-							<div class="typeahead__field">
-								<span class="typeahead__query">
-									<label for="species">Species</label>
-									<input id="species" type="search" autocomplete="off">
-									<!-- <small class="form-text text-muted">Enter the species of fish you wish to search for.</small> -->
-								</span>
-							</div>
+				<div class="col-md-6">
+					<div class="typeahead__container">
+						<div class="typeahead__field">
+							<span class="typeahead__query">
+								<label for="species">Species</label>
+								<input id="species" type="search" autocomplete="off">
+								<small class="form-text text-muted">Enter the species of fish you wish to search for.</small>
+							</span>
 						</div>
 					</div>
-					<div class="col-md-6">
-						<div class="typeahead__container">
-							<div class="typeahead__field">
-								<span class="typeahead__query">
-									<label for="country">Country</label>
-									<input id="country" type="search" autocomplete="off">
-									<!-- <small class="form-text text-muted">Enter the country you'd like to fish in.</small> -->
-								</span>
-							</div>
+				</div>
+				<div class="col-md-6">
+					<div class="typeahead__container">
+						<div class="typeahead__field">
+							<span class="typeahead__query">
+								<label for="country">Country</label>
+								<input id="country" type="search" autocomplete="off">
+								<small class="form-text text-muted">Enter the country you'd like to fish in.</small>
+							</span>
 						</div>
 					</div>
-				<!-- </form> -->
+				</div>
 			</div>
 
-			<div id="map" style="width: 100px; height: 100px;"></div>
-		    <script>
-		      function initMap() {
-		        var uluru = {lat: -25.363, lng: 131.044};
-		        var map = new google.maps.Map(document.getElementById('map'), {
-		          zoom: 4,
-		          center: uluru
-		        });
-		        var marker = new google.maps.Marker({
-		          position: uluru,
-		          map: map
-		        });
-		      }
-		    </script>
-
+			<div class="row" id="risks">
+				<div class="col-md-8" id="mapWrapper">
+					<div id="map"></div>
+				</div>
+			</div>
 		</div>
 
 	<script>
@@ -86,6 +74,28 @@
 			source: [ "Do you", "Know", "De wey"]
 		});
 	</script>
+
+	<script>
+      function initMap() {
+        var country = "Somalia";
+        var geocoder = new google.maps.Geocoder();
+
+        var map = new google.maps.Map(document.getElementById('map'), {
+          zoom: 4
+        });
+
+        geocoder.geocode( {'address' : country}, function(results, status) {
+		    if (status == google.maps.GeocoderStatus.OK) {
+		        map.setCenter(results[0].geometry.location);
+		    }
+		});
+
+        var marker = new google.maps.Marker({
+          position: uluru,
+          map: map
+        });
+      }
+    </script>
 
 	<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCC7nrWmeyQ6BsCv1jZLCckO02FBqQHFUg&callback=initMap"></script>
 
