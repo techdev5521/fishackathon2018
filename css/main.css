@@ -1,1 +1,14 @@
 /* main.css */
+
+body{
+	background-image: url('../images/background.png');
+}
+
+/* Custom ID */
+#title{
+	margin-top: 30px;
+}
+
+#title h1{
+	color: white;
+}
