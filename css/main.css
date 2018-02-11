@@ -5,10 +5,29 @@ body{
 }
 
 /* Custom ID */
-#title{
-	margin-top: 30px;
+#title {
+	position: relative;
+	padding-top:30px;
+	padding-left:26%;
+	font-size: 4em;
 }
-
 #title h1{
 	color: white;
+}
+.col-md-12 {
+	position: relative;
+	padding-top:30px;
+	padding-left:20%;
+}
+.col-md-12 h1{
+	font-size:1.5em;
+}
+.col-md-6 {
+	position:relative;
+	padding-top:50px;
+	padding-left:10%;
+}	
+.col-md-6 h1{
+	color:grey;
+	font-size:1.7em;
 }
