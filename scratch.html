@@ -1,38 +1,31 @@
+<!DOCTYPE html>
 <html>
-
-	<head>
-		<link rel="stylesheet" href="css/jquery.typeahead.min.css">
-		<script src="js/jquery-3.2.1.slim.min.js"></script>
-		<script src="js/jquery.typeahead.min.js"></script>
-	</head>
-	
-	<body>
-		<!-- <form> -->
-		    <div class="typeahead__container">
-		        <div class="typeahead__field">
-		 
-		            <span class="typeahead__query">
-		                <input class="js-typeahead"
-		                       name="q"
-		                       type="search"
-		                       autocomplete="off">
-		            </span>
-		            <span class="typeahead__button">
-		                <button type="submit">
-		                    <span class="typeahead__search-icon"></span>
-		                </button>
-		            </span>
-		 
-		        </div>
-		    </div>
-		<!-- </form> -->
-	</body>
-
-	<script>
-		$('.js-typeahead').typeahead({
-		    minLength: 2,
-		    source: [ "This is", "Sparta"]
-		});
-	</script>
-
+  <head>
+    <style>
+       #map {
+        height: 400px;
+        width: 100%;
+       }
+    </style>
+  </head>
+  <body>
+    <h3>My Google Maps Demo</h3>
+    <div id="map"></div>
+    <script>
+      function initMap() {
+        var uluru = {lat: -25.363, lng: 131.044};
+        var map = new google.maps.Map(document.getElementById('map'), {
+          zoom: 4,
+          center: uluru
+        });
+        var marker = new google.maps.Marker({
+          position: uluru,
+          map: map
+        });
+      }
+    </script>
+    <script async defer
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCC7nrWmeyQ6BsCv1jZLCckO02FBqQHFUg&callback=initMap">
+    </script>
+  </body>
 </html>
