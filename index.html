@@ -60,6 +60,9 @@
 				<div class="col-md-8" id="mapWrapper">
 					<div id="map"></div>
 				</div>
+				<div class="col-md-4" id="result">
+					
+				</div>
 			</div>
 		</div>
 
@@ -77,27 +80,31 @@
 
 	<script>
       function initMap() {
-        var country = "Somalia";
-        var geocoder = new google.maps.Geocoder();
+	        var country = "Somalia";
+	        var geocoder = new google.maps.Geocoder();
 
-        var map = new google.maps.Map(document.getElementById('map'), {
-          zoom: 4
-        });
+	        var map = new google.maps.Map(document.getElementById('map'), {
+	          zoom: 1
+	        });
 
-        geocoder.geocode( {'address' : country}, function(results, status) {
-		    if (status == google.maps.GeocoderStatus.OK) {
-		        map.setCenter(results[0].geometry.location);
-		    }
-		});
+	        geocoder.geocode( {'address' : country}, function(results, status) {
+			    if (status == google.maps.GeocoderStatus.OK) {
+			        map.setCenter(results[0].geometry.location);
+			    }
+			});
+    	}
 
-        var marker = new google.maps.Marker({
-          position: uluru,
-          map: map
-        });
-      }
+    	function setCustomCenter(country){
+    		geocoder.geocode( {'address' : country}, function(results, status) {
+			    if (status == google.maps.GeocoderStatus.OK) {
+			        map.setCenter(results[0].geometry.location);
+			    }
+			});
+    	}
     </script>
 
 	<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCC7nrWmeyQ6BsCv1jZLCckO02FBqQHFUg&callback=initMap"></script>
+	<!--  -->
 
 	</body>
 
