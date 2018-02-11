@@ -14,20 +14,31 @@ body{
 #title h1{
 	color: white;
 }
-.col-md-12 {
+#command {
 	position: relative;
 	padding-top:30px;
 	padding-left:20%;
 }
-.col-md-12 h1{
+#command h1{
 	font-size:1.5em;
 }
-.col-md-6 {
+#species {
 	position:relative;
-	padding-top:50px;
-	padding-left:10%;
+	padding-top:20px;
+	padding-left:23%;
+	padding-right:23%;
 }	
-.col-md-6 h1{
-	color:grey;
+#species h1{
+	color:white;
+	font-size:1.7em;
+}
+#location {
+	position:relative;
+	padding-top:20px;
+	padding-left:23%;
+	padding-right:23%;
+}
+#location h1 {
+	color:white;
 	font-size:1.7em;
 }
